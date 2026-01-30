@@ -71,8 +71,31 @@ fn parallel_transform(data: Vec<f64>, factor: f64) -> PyResult<Vec<f64>> {
 /// Python module definition
 #[pymodule]
 fn polyglot_bridge(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    // Legacy List-based operations (for backward compatibility)
     m.add_function(wrap_pyfunction!(sum_of_squares, m)?)?;
     m.add_function(wrap_pyfunction!(matrix_multiply, m)?)?;
     m.add_function(wrap_pyfunction!(parallel_transform, m)?)?;
+    
+    // 🚀 NEXT-GEN: Zero-Copy NumPy Operations (THE GAME CHANGER)
+    m.add_function(wrap_pyfunction!(core::numpy_ops::matmul_numpy, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::matmul_numpy_f32, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::parallel_map_numpy, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::parallel_map_numpy_f32, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::sum_of_squares_numpy, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::sum_of_squares_numpy_f32, m)?)?;
+    
+    // 🔥 FUSED OPERATIONS (THE EFFICIENCY PLAY)
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_linear, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_linear_f32, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_linear_relu, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_linear_relu_f32, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_dropout_add, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_layer_norm, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::fused_softmax, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::relu_numpy, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::relu_numpy_f32, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::sigmoid_numpy, m)?)?;
+    m.add_function(wrap_pyfunction!(core::numpy_ops::sigmoid_numpy_f32, m)?)?;
+    
     Ok(())
 }
