@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "polyglot-bridge"
-version = "0.1.0"
+version = "0.1.2"
 description = "High-performance ML data pipeline accelerator - Rust-powered computational functions with seamless Python integration"
 readme = "README.md"
 requires-python = ">=3.8"

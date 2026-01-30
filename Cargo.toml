@@ -1,6 +1,6 @@
 [package]
 name = "polyglot-bridge"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2024"
 rust-version = "1.93"
 authors = ["Septian Faturohman <farizseptian24@gmail.com>"]
