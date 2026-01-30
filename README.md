@@ -225,7 +225,7 @@ python python/benchmarks.py
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/polyglot-bridge.git
+git clone https://github.com/nirvagold/polyglot-bridge.git
 cd polyglot-bridge
 
 # Create virtual environment
@@ -325,6 +325,6 @@ Have questions or suggestions? Open an issue on GitHub!
 
 **Stop waiting. Start accelerating.** 🚀
 
-[⭐ Star this repo](https://github.com/yourusername/polyglot-bridge) if The Polyglot Bridge saves you time!
+[⭐ Star this repo](https://github.com/nirvagold/polyglot-bridge) if The Polyglot Bridge saves you time!
 
 </div>
