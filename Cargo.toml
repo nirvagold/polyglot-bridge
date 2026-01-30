@@ -3,6 +3,12 @@ name = "polyglot-bridge"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.93"
+authors = ["Septian Faturohman <farizseptian24@gmail.com>"]
+description = "High-performance ML data pipeline accelerator with Rust-powered computational functions"
+license = "MIT"
+repository = "https://github.com/nirvagold/polyglot-bridge"
+keywords = ["python", "pyo3", "performance", "ml", "ffi"]
+categories = ["api-bindings", "science"]
 
 [lib]
 name = "polyglot_bridge"
